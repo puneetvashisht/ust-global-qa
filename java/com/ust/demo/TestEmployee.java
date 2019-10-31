@@ -25,20 +25,22 @@ public class TestEmployee {
 		
 //		printEmployees(regularEmp);
 //		printEmployees(contractEmp);
-		
+//		Employee emp = new Employee();
 		Employee employees[] = {regularEmp, regularEmp1, contractEmp};
 		
 		double totalSalary = 0.0;
 		for(Employee e: employees){
 			printEmployees(e);
-			if(e instanceof RegularEmployee){
-				RegularEmployee e1 = (RegularEmployee)e;
-				totalSalary = totalSalary + e1.salary;
-			}
-			else if(e instanceof ContractualEmployee){
-				ContractualEmployee e2 = (ContractualEmployee)e;
-				totalSalary = totalSalary + e2.payPerMonth;
-			}
+			e.incrementSalary();
+			printEmployees(e);
+//			if(e instanceof RegularEmployee){
+//				RegularEmployee e1 = (RegularEmployee)e;
+//				totalSalary = totalSalary + e1.salary;
+//			}
+//			else if(e instanceof ContractualEmployee){
+//				ContractualEmployee e2 = (ContractualEmployee)e;
+//				totalSalary = totalSalary + e2.payPerMonth;
+//			}
 			
 //			printEmployees(e);
 		}

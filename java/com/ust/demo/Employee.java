@@ -1,7 +1,9 @@
 package com.ust.demo;
 
-public class Employee{
+public abstract class Employee{
 	
+	
+
 	private int id;
 	private String name;
 	Address address;
@@ -22,9 +24,17 @@ public class Employee{
 		}
 		
 	}
-	public Employee(int id, String name, Address address) {
+	
+	public Employee(int id, String name) {
+		super();
 		this.id = id;
 		this.name = name;
+	}
+	public Employee(int id, String name, Address address) {
+//		this.id = id;
+//		this.name = name;
+//		super();
+		this(id, name);
 		this.address = address;
 	}
 	public Employee() {
@@ -35,7 +45,7 @@ public class Employee{
 		return "Employee [id=" + id + ", name=" + name + "]";
 	}
 
-	
+	public abstract void incrementSalary();
 	
 	
 	

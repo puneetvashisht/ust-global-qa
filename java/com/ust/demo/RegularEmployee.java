@@ -7,11 +7,17 @@ public class RegularEmployee extends Employee{
 		super(id, name, address);
 		this.salary = salary;
 	}
-
 	@Override
 	public String toString() {
 		return "RegularEmployee [salary=" + salary + ", getName()=" + getName() + ", getId()=" + getId() + "]";
 	}
+	
+	public void incrementSalary(){
+		this.salary = this.salary * 1.1;
+	}
+	
+	
+	
 
 
 	

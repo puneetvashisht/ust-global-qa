@@ -3,8 +3,9 @@ package com.ust;
 public class Employee{
 	
 	public Employee(int id, String name, double s){
-		this.id = id;
-		this.name = name;
+		this(id, name);
+//		this.id = id;
+//		this.name = name;
 		salary = s;
 	}
 	public Employee(int id, String name){
