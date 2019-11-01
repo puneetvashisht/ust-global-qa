@@ -8,6 +8,14 @@ public class Employee implements Comparable<Employee>{
 //		this.name = name;
 		salary = s;
 	}
+	
+	public Employee(int id, String name, String lastName, double s){
+		this(id, name);
+//		this.id = id;
+//		this.name = name;
+		this.lastName = lastName;
+		salary = s;
+	}
 	public Employee(int id, String name){
 		this.id = id;
 		this.name = name;
@@ -16,10 +24,17 @@ public class Employee implements Comparable<Employee>{
 //	byte b = (byte)128;
 	int id;
 	String name;
+	String lastName;
 	double salary = 33333.33;
 	
 	
 	
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 	public double getSalary() {
 		return salary;
 	}
