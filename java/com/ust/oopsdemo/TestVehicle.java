@@ -1,5 +1,8 @@
 package com.ust.oopsdemo;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class TestVehicle {
 
 	public static void main(String[] args) {
@@ -12,7 +15,26 @@ public class TestVehicle {
 		Plane plane = new Plane(1000, 10000, planeEngine);
 		plane.start();
 		
-//		ArrayList<?>
+		ArrayList<Vehicle> vehicles = new ArrayList<>();
+		vehicles.add(plane);
+		vehicles.add(car);
+		
+		int maxSpeed = 0;
+		
+		for(Vehicle v : vehicles){
+			if(maxSpeed < v.speed){
+				maxSpeed = v.speed;
+			}
+			v.start();
+		}
+		
+		System.out.println("Maximum speed is :" + maxSpeed);
+		
+		Collections.sort(vehicles);
+		
+		for(Vehicle v : vehicles){
+			v.start();
+		}
 
 	}
 

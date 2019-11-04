@@ -1,6 +1,6 @@
 package com.ust.oopsdemo;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Comparable<Vehicle>{
 	
 	int speed;
 	Engine engine;
@@ -18,6 +18,11 @@ public abstract class Vehicle {
 
 
 	public abstract void start();
+	
+	@Override
+	public int compareTo(Vehicle vehicle){
+		return this.speed - vehicle.speed;
+	}
 	
 
 }
