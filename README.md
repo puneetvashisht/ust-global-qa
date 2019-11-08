@@ -1,2 +1,2 @@
 # ust-global-qa
-This is our first project
+this is for testing git
